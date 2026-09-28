@@ -1,0 +1,1065 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lara Ergen's professional portfolio: Supply Chain Management, procurement, business development, and marketing." />
+  <title>Lara Ergen | Supply Chain & Business</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #142b43;
+      --navy-light: #203d59;
+      --teal: #287c78;
+      --teal-light: #e8f2f0;
+      --ink: #1e2935;
+      --muted: #687583;
+      --line: #e1e7ec;
+      --paper: #f7f9fb;
+      --white: #ffffff;
+      --gold: #c49b59;
+      --shadow: 0 16px 45px rgba(20, 43, 67, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    header {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-family: "Manrope", sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--teal);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #526171;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-contact {
+      border: 1px solid var(--navy);
+      border-radius: 7px;
+      padding: 9px 16px;
+      color: var(--navy);
+      transition: 0.2s ease;
+    }
+
+    .nav-contact:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(circle at 85% 20%, rgba(40,124,120,0.16), transparent 28%),
+        linear-gradient(120deg, #f7f9fb 0%, #edf3f5 100%);
+      padding: 100px 0 94px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .eyebrow {
+      color: var(--teal);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      letter-spacing: -3px;
+      max-width: 720px;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: var(--teal);
+    }
+
+    .hero-description {
+      max-width: 680px;
+      font-size: 1.08rem;
+      color: #536272;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 19px;
+      border-radius: 7px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      border: 1px solid #cbd5df;
+      color: var(--navy);
+      background: rgba(255,255,255,0.65);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .hero-card {
+      background: var(--navy);
+      color: white;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+      right: -65px;
+      top: -65px;
+    }
+
+    .hero-card-label {
+      color: #a9c9c9;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-card p {
+      color: #d0dbe4;
+      font-size: 0.9rem;
+    }
+
+    .hero-stat {
+      border-top: 1px solid rgba(255,255,255,0.18);
+      margin-top: 24px;
+      padding-top: 19px;
+    }
+
+    .hero-stat strong {
+      display: block;
+      color: white;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+
+    .hero-stat span {
+      color: #c0ced9;
+      font-size: 0.78rem;
+    }
+
+    /* Shared sections */
+    section {
+      padding: 82px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 34px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      letter-spacing: -1.2px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      color: #596776;
+      margin-bottom: 16px;
+    }
+
+    .education-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(20,43,67,0.04);
+    }
+
+    .education-card h3 {
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .education-card .school {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .education-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    .education-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      background: var(--teal-light);
+      color: #246a67;
+      border-radius: 5px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    /* Skills */
+    .skills-section {
+      background: #eef3f6;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .skill-card h3 {
+      color: var(--navy);
+      font-size: 1.03rem;
+      margin-bottom: 15px;
+    }
+
+    .skill-card ul {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      color: #5c6977;
+      font-size: 0.88rem;
+    }
+
+    .skill-card li::before {
+      content: "—";
+      color: var(--teal);
+      font-weight: 800;
+      margin-right: 9px;
+    }
+
+    .skill-card.featured {
+      border-top: 3px solid var(--teal);
+    }
+
+    /* Experience */
+    .experience-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .experience-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      padding: 28px 30px;
+    }
+
+    .experience-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .experience-card h3 {
+      font-size: 1.16rem;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .role {
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .date {
+      color: #7a8793;
+      font-size: 0.82rem;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .experience-card ul {
+      padding-left: 19px;
+      color: #596776;
+      font-size: 0.9rem;
+    }
+
+    .experience-card li {
+      margin: 7px 0;
+      padding-left: 3px;
+    }
+
+    /* Projects */
+    .projects-section {
+      background: #eef3f6;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      padding: 29px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      box-shadow: 0 8px 25px rgba(20,43,67,0.035);
+    }
+
+    .project-type {
+      color: var(--teal);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      color: var(--navy);
+      font-size: 1.25rem;
+      margin-bottom: 7px;
+    }
+
+    .project-date {
+      color: #8994a0;
+      font-size: 0.8rem;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      color: #596776;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .project-card ul {
+      padding-left: 18px;
+      color: #596776;
+      font-size: 0.87rem;
+      margin-bottom: 20px;
+    }
+
+    .project-card li {
+      margin: 7px 0;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: auto;
+      padding-top: 10px;
+    }
+
+    .project-tags span {
+      background: #f0f3f6;
+      color: #566575;
+      border-radius: 4px;
+      padding: 5px 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 20px;
+      color: var(--teal);
+      font-size: 0.87rem;
+      font-weight: 800;
+    }
+
+    .project-link:hover {
+      color: var(--navy);
+    }
+
+    /* Interests */
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .interest {
+      background: white;
+      border: 1px solid var(--line);
+      color: #4e5d6b;
+      border-radius: 7px;
+      padding: 10px 14px;
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    /* Contact */
+    .contact-section {
+      background: var(--navy);
+      color: white;
+      padding: 76px 0;
+    }
+
+    .contact-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .contact-section .eyebrow {
+      color: #a9d0cc;
+    }
+
+    .contact-section h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .contact-section p {
+      color: #c9d5df;
+      max-width: 600px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-links a {
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      padding: 11px 15px;
+      border-radius: 7px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .contact-links a:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    footer {
+      background: #102338;
+      color: #aab8c5;
+      padding: 18px 0;
+      font-size: 0.78rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .hero-content,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        gap: 35px;
+      }
+
+      .hero {
+        padding: 72px 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-content {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        min-height: 68px;
+      }
+
+      .nav-links {
+        gap: 13px;
+        font-size: 0.75rem;
+      }
+
+      .nav-links li:nth-child(2),
+      .nav-links li:nth-child(3) {
+        display: none;
+      }
+
+      .nav-contact {
+        padding: 7px 10px;
+      }
+
+      h1 {
+        letter-spacing: -1.8px;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      .skills-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-top {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .experience-card,
+      .project-card {
+        padding: 23px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a class="logo" href="#home">LARA <span>ERGEN</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a class="nav-contact" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div>
+          <p class="eyebrow">Supply Chain Management · Business · Marketing</p>
+          <h1>Connecting <span>strategy</span> with execution.</h1>
+          <p class="hero-description">
+            I’m Lara Ergen, a Rutgers Business School student focused on supply chain management,
+            procurement, and business development, with an interest in CPG and luxury retail.
+            I bring together research, analytical thinking, and strategic communication to
+            understand markets and support business decisions.
+          </p>
+          <div class="hero-buttons">
+            <a class="button button-primary" href="#projects">Explore My Work <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="mailto:laraergen11@gmail.com">Get in Touch</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <p class="hero-card-label">Academic Profile</p>
+          <h2>Rutgers Business School</h2>
+          <p>Supply Chain Management</p>
+          <p>Professional Selling Concentration</p>
+          <div class="hero-stat">
+            <strong>3.97 / 4.0</strong>
+            <span>Cumulative GPA</span>
+          </div>
+          <div class="hero-stat">
+            <strong>2028</strong>
+            <span>Expected Graduation</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">About Me</p>
+          <h2>Business-minded. Research-driven.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              I am an undergraduate student at Rutgers Business School studying Supply Chain
+              Management and pursuing a concentration in Professional Selling. My interests
+              center on how businesses source, operate, and grow—particularly in consumer
+              packaged goods, beauty, fashion, and luxury retail.
+            </p>
+            <p>
+              Through internship and academic projects, I have explored public procurement,
+              historical bid data, market research, competitor positioning, and go-to-market
+              strategy. I enjoy translating complex information into organized insights that
+              can support practical business decisions.
+            </p>
+            <p>
+              I’m especially interested in the connection between supply chain operations
+              and the customer-facing side of business: how sourcing, pricing, marketing,
+              and execution work together to create value.
+            </p>
+          </div>
+
+          <div class="education-card">
+            <h3>Education</h3>
+            <p class="school">Rutgers Business School</p>
+            <p>Rutgers University–New Brunswick</p>
+            <p>B.S. in Supply Chain Management</p>
+            <p>Professional Selling Concentration</p>
+            <div class="education-details">
+              <span class="pill">Expected 2028</span>
+              <span class="pill">GPA: 3.97 / 4.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Capabilities</p>
+          <h2>Skills & Areas of Focus</h2>
+          <p>
+            A foundation in supply chain and procurement, supported by research,
+            business development, and marketing capabilities.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card featured">
+            <h3>Supply Chain & Procurement</h3>
+            <ul>
+              <li>Procurement research</li>
+              <li>Public RFP and bid analysis</li>
+              <li>Supplier and vendor communication</li>
+              <li>Pricing and contract research</li>
+              <li>Supply chain management</li>
+              <li>Data organization</li>
+            </ul>
+          </article>
+
+          <article class="skill-card featured">
+            <h3>Analytics & Research</h3>
+            <ul>
+              <li>Market research</li>
+              <li>Competitive analysis</li>
+              <li>Target market segmentation</li>
+              <li>Demographic and behavioral research</li>
+              <li>Historical pricing comparisons</li>
+              <li>Research synthesis</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3>Business & Marketing</h3>
+            <ul>
+              <li>Business development</li>
+              <li>Marketing strategy</li>
+              <li>Go-to-market planning</li>
+              <li>Positioning and promotion</li>
+              <li>Customer feedback research</li>
+              <li>Professional communication</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3>Software & Tools</h3>
+            <ul>
+              <li>Microsoft Excel</li>
+              <li>Microsoft Outlook</li>
+              <li>Salesforce</li>
+              <li>Microsoft PowerPoint</li>
+              <li>Microsoft Word</li>
+              <li>Microsoft OneDrive</li>
+              <li>Canva</li>
+              <li>RSVPify</li>
+              <li>Google Sheets & Slides</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3>Communication</h3>
+            <ul>
+              <li>Vendor outreach</li>
+              <li>Procurement coordinator communication</li>
+              <li>Presentation development</li>
+              <li>Cross-functional collaboration</li>
+              <li>Customer survey design</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3>Industry Interests</h3>
+            <ul>
+              <li>Consumer packaged goods (CPG)</li>
+              <li>Beauty and cosmetics</li>
+              <li>Luxury and fashion retail</li>
+              <li>Retail operations</li>
+              <li>Strategic sourcing</li>
+              <li>Brand and business strategy</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Professional Experience</p>
+          <h2>Experience</h2>
+          <p>Applying research, organization, and communication to real business needs.</p>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-card">
+            <div class="experience-top">
+              <div>
+                <h3>Arbor Works, LLC</h3>
+                <p class="role">Remote Business Development & Marketing Intern</p>
+              </div>
+              <p class="date">June 2025 – August 2025</p>
+            </div>
+            <ul>
+              <li>
+                Developed a multi-state database across 20+ states tracking historical
+                vegetation management RFPs, award tabulations, and relevant procurement opportunities.
+              </li>
+              <li>
+                Initiated email communications with procurement coordinators and external
+                vendors to collect pricing, service specifications, and contract requirements
+                for 5 upcoming projects.
+              </li>
+              <li>
+                Created a post-service customer satisfaction survey with 10+ targeted
+                questions to support client feedback collection and marketing research.
+              </li>
+              <li>
+                Designed a professional networking happy-hour invitation using Canva and
+                managed 200+ invitations through RSVPify to track attendance and engagement.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects</h2>
+          <p>
+            Academic and internship projects involving procurement analysis,
+            market research, and strategic planning.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <p class="project-type">Procurement · Supply Chain</p>
+            <h3>Multi-State RFP & Bid Database</h3>
+            <p class="project-date">Arbor Works, LLC · June – August 2025</p>
+            <p>
+              Researched historical public procurement data to support pricing strategy
+              and improve access to past bid and contract information for vegetation
+              management services.
+            </p>
+            <ul>
+              <li>
+                Researched bid tabulations and contract awards across 20+ state public
+                procurement portals.
+              </li>
+              <li>
+                Compared competitor pricing across West Coast markets, considering service
+                scope, equipment requirements, geographic factors, and award outcomes.
+              </li>
+              <li>
+                Built an Excel database organized by state, city or county, service category,
+                dates, and pricing details.
+              </li>
+              <li>
+                Consolidated 40+ historical bid documents into a centralized OneDrive folder
+                to support accessibility and consistency.
+              </li>
+            </ul>
+            <div class="project-tags">
+              <span>Procurement Research</span>
+              <span>Excel</span>
+              <span>Pricing Analysis</span>
+              <span>RFPs</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">Marketing Strategy · Market Research</p>
+            <h3>Scarlet AI Go-to-Market Strategy</h3>
+            <p class="project-date">Rutgers Academic Project · September – December 2025</p>
+            <p>
+              Developed a go-to-market marketing plan for a Rutgers-specific AI learning
+              assistant targeting more than 71,000 first- and second-year undergraduate students.
+            </p>
+            <ul>
+              <li>
+                Conducted market research on needs, buying behavior, trends, demographics,
+                target audiences, and competitors.
+              </li>
+              <li>
+                Analyzed three AI note-taking and learning tools: Otter.ai, TurboLearn,
+                and Fellow.
+              </li>
+              <li>
+                Defined target segments and positioning using demographic, psychographic,
+                and behavioral analysis.
+              </li>
+              <li>
+                Designed an integrated promotion strategy featuring affiliate marketing,
+                user-generated content, campus partnerships, and referrals.
+              </li>
+              <li>
+                Allocated and justified a $35,000 marketing budget across research,
+                promotion, partnerships, and launch activities.
+              </li>
+            </ul>
+            <div class="project-tags">
+              <span>Market Research</span>
+              <span>Competitive Analysis</span>
+              <span>Positioning</span>
+              <span>GTM Strategy</span>
+            </div>
+            <a class="project-link"
+               href="https://docs.google.com/presentation/d/1nlgW68S5ngjmf8mWC76w5J6SxBtVW1WkU8vIAjMag0Q/edit?usp=sharing"
+               target="_blank" rel="noopener noreferrer">
+              View Presentation <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Where I’m Looking</p>
+          <h2>Industry Interests</h2>
+          <p>
+            Exploring how operations, sourcing, and customer strategy intersect
+            across consumer and retail businesses.
+          </p>
+        </div>
+        <div class="interests">
+          <span class="interest">Retail Operations</span>
+          <span class="interest">Consumer Packaged Goods</span>
+          <span class="interest">Beauty & Cosmetics</span>
+          <span class="interest">Luxury Retail</span>
+          <span class="interest">Fashion Business</span>
+          <span class="interest">Strategic Sourcing</span>
+          <span class="interest">Procurement</span>
+          <span class="interest">Supply Chain Strategy</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-content">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s connect.</h2>
+          <p>
+            I’m interested in opportunities and conversations related to supply chain,
+            procurement, retail operations, and business strategy.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:laraergen11@gmail.com">Email Me ↗</a>
+          <a href="https://www.linkedin.com/in/lara-ergen-9aa129382"
+             target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <span>© 2026 Lara Ergen</span>
+      <span>Supply Chain Management · Rutgers Business School</span>
+    </div>
+  </footer>
+</body>
+</html>
